@@ -71,6 +71,25 @@
       <div class='result-label'>
         <label id='result-label'></label>
       </div>
+
+      <div class='container d-flex justify-content-center'>
+        <form class='col-6' action="/reportxray" method="POST">
+          <div class="form-group">
+            <label for="email">Patient Email address</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="name">Patient Name</label>
+            <input class="form-control" id="name" name="name" placeholder="Alfonso Santacruz" required>
+          </div>
+          <div class="form-group">
+            <label for="name">Diagnosis</label>
+            <input class="form-control" id="result-label" name="diagnosis" required>
+          </div>
+          <button type="submit" class='choose-file-button'>Export to Patient's Record</button>
+        </form>
+      </div>
+
     </div>
   </div>
 </div>

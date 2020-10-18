@@ -21,6 +21,11 @@ app.use(session({
 
 app.use(doctorRoutes);
 
+// admin.initializeApp({
+//   credential: admin.credential.cert(keys.firebase),
+//   databaseURL: "https://doctoraid-187fe.firebaseio.com"
+// });
+
 // app.listen(process.env.PORT, () => {
 //     console.log('Server is running on Heroku');
 // });

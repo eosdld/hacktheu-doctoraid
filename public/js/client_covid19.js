@@ -29,7 +29,7 @@ function analyze() {
   var xhr = new XMLHttpRequest();
   //var loc = window.location;
   //xhr.open("GET", "https://cors-escape.herokuapp.com/https://maximum.blog/@shalvah/posts");
-  xhr.open("POST", 'https://us-central1-blindness-detection-268613.cloudfunctions.net/aptos-API', true);
+  xhr.open("POST", 'https://us-west3-doctoraid-292917.cloudfunctions.net/covid_19_detector', true);
   xhr.send(fileData);
 
   xhr.onerror = function() {

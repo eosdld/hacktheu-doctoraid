@@ -1,0 +1,24 @@
+<!-- 	    <div class="p-4 col-lg-12">
+			<table class="table table-hover">
+				<thead class="thead-light">
+					<tr>
+						<th class='text-center align-middle'>Email</th>
+						<th class='text-center align-middle'>Name</th>
+						<th class='text-center align-middle'>Diabetic Retinopathy</th>
+						<th class='text-center align-middle'>Chest X-Ray Anomalies</th>
+						<th class='text-center align-middle'>Covid-19</th>
+					</tr>
+				</thead>
+				<tbody>
+					<%patients.forEach(function(patient, index){%>
+						<tr>
+							<td class='text-center align-middle'><%=patient.email%></td>
+							<td class='text-center align-middle'><%=patient.email%></td>
+							<td class='text-center align-middle'><%=patient.dire_diagnosis%></td>
+							<td class='text-center align-middle'><%=patient.xray_diagnosis%></td>
+							<td class='text-center align-middle'><%=patient.covid19%></td>
+						</tr>
+					<%});;%>
+				</tbody>
+			</table>
+		</div> -->
