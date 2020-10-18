@@ -11,6 +11,10 @@ footer {
     background-color: #00008B;
 }
 
+.navbar {
+    background-color: #00008B;   
+}
+
 .no-display {
     display: none;
 }
@@ -55,10 +59,10 @@ button.choose-file-button {
     width: 200px;
     height: 40px;
     border-radius: 2px;
-    background-color: #00CED1;
+    background-color: #E6E6FA;
     border: solid 2px #F8F8FF;
     font-size: 13px;
-    color: #F8F8FF;
+    color: #000000;
 }
 
 button.analyze-button {
@@ -66,16 +70,17 @@ button.analyze-button {
     height: 40px;
     border: solid 2px #F8F8FF;
     border-radius: 2px;
-    background-color: #00CED1;
+    background-color: #E6E6FA;
     font-size: 13px;
-    color: #F8F8FF;
+    color: #000000;
 }
 
 button:focus {
     outline: 0;
 }
 
-<!-- Diabetic retinopathy #E6E6FA-->
+/*<!-- Diabetic retinopathy #E6E6FA-->
 <!-- Doctor AId #DC143C-->
 <!-- Chest XRay #00CED1-->
 <!-- COVID #000000 with #F8F8FF words-->
+*/
