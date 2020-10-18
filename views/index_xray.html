@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <title>DoctorAId</title>
+  <meta charset='utf-8'>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel='stylesheet' href='../static/style_xray.css'>
+  <script src='../js/client.js'></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <a class="navbar-brand" href="/">
+        <img src="/img/DoctorAId.png" width="30" height="30" class="d-inline-block align-top" loading=lazy>
+        DoctorAId
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Diabetic Retinopathy <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/schedule">Chest X-Ray Diagnosis<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://docs.google.com/document/d/19K7XqHdoI0qjpNEPymBximSDBMjbN83fqy1syKVn0vM/edit?usp=sharing" target="_blank">COVID-19 Test<span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0" action="/logout" method="GET">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign out</button>
+      </form>
+    </div>
+  </nav>
+
+<div>
+  <div class='center'>
+    <!--  -->
+    <div class="container">
+      <div class= "jumbotron">
+        <img src="/img/Chest XRAY.png" width="70" height="70" class="d-inline-block align-top" loading=lazy>
+          <h1>Chest X-Ray Diagnosis</h1>
+        <p> Use images of chest x-rays to diagnose the patient.</p>
+      </div>
+    </div>
+    <div class='content'>
+      <div class='no-display'>
+        <input id='file-input'
+               class='no-display'
+               type='file'
+               name='file'
+               accept='image/*'
+               onchange='showPicked(this)'>
+      </div>
+      <div class="container">
+        <button class='choose-file-button' type='button' onclick='showPicker()'>Select Image</button>
+        <div class='upload-label'>
+        <label id='upload-label'>No file chosen</label>
+        </div>
+      </div>
+      <div>
+        <img id='image-picked' class='no-display' alt='Chosen Image' height='200'>
+      </div>
+      <div class='analyze'>
+        <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Detect</button>
+      </div>
+      <div class='result-label'>
+        <label id='result-label'></label>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+
+<!-- Open a chrome env running the following in Windows cdm
+start chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security
+this will avoid CORS same origin problem -->
+
+<!-- MacOSx
+open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security -->
