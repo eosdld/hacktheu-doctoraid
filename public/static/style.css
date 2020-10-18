@@ -2,15 +2,6 @@ body {
     background-color: #DCDCDC;
 }
 
-header {
-    height: 80px;
-    background-color: #efefef;
-}
-footer {
-    height: 10px;
-    background-color: #00008B;
-}
-
 .navbar {
     background-color: #00008B;   
 }
