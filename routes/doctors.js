@@ -1,8 +1,16 @@
 var express = require("express"),
 	router = express.Router();
 
-router.get("/", function(req, res){
-	res.render("index");
+router.get("/dire", function(req, res){
+	res.render("index_dire");
+});
+
+router.get("/chestxray", function(req, res){
+	res.render("index_xray");
+});
+
+router.get("/covid19", function(req, res){
+	res.render("index_covid");
 });
 
 // Render each page according to the route.
