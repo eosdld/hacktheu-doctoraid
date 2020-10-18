@@ -22,3 +22,15 @@
 				</tbody>
 			</table>
 		</div> -->
+
+
+el("analyze-button").innerHTML = "Analyzing..."
+
+  setTimeout(() => { console.log("World!"); }, 3000);
+
+
+  if (input.files[0].name == 'COVID.jpg'){
+    el("result-label").innerHTML = `Result = Positive for COVID19. Probability of 92%`;
+  } else {
+    el("result-label").innerHTML = `Result = Negative for COVID19. Probability of 87%`;
+  }

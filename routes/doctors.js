@@ -72,21 +72,21 @@ router.post("/reportxray", function(req, res){
 	    xray_diagnosis: diagnosis
 	});
 
-	res.redirect("/dire")
+	res.redirect("/index_xray")
 });
 
 router.post("/reportcovid", function(req, res){
 	console.log(req.body);
 	const 	name = req.body.name,
 			email = req.body.email,
-			dire_diagnosis = req.body.diagnosis;
+			covid_diagnosis = req.body.diagnosis;
 	
 	var usersRef = ref.child("users");
 	usersRef.child(name).update({
-	    covid19: diagnosis
+	    covid19: covid_diagnosis
 	});
 
-	res.redirect("/dire")
+	res.redirect("/index_covid")
 });
 
 // Render each page according to the route.

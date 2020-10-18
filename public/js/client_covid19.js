@@ -40,7 +40,7 @@ function analyze() {
       var response = JSON.parse(e.target.responseText);
       // console.log(response);
       // console.log(response.Confidence);
-      el("result-label").innerHTML = `Result = ${response["Predicted Class"]}; Condifence = ${Math.round(response.Confidence*100, 2)}%`;
+      el("result-label").innerHTML = `Result = ${response}%`;
     }
     el("analyze-button").innerHTML = "Analyze";
   };
